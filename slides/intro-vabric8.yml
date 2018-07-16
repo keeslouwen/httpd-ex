@@ -15,6 +15,5 @@ chapters:
 - vabric8/intro.md
 - common/toc.md
 - - vabric8/Docker_Overview.md
-  - intro/Docker_History.md
   - vabric8/Orchestration_Overview.md
   - common/thankyou.md

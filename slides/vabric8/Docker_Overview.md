@@ -24,6 +24,29 @@ In this intro, we will talk about:
   * multiple environments
   * quickly scaling out
 
+* Tenets:
+  * cloud native applications
+  * continuous integration
+  * continuous delivery
+  * continuous deployment
+
+---
+
+class: pic
+
+## Cloud Native
+
+![cloudnative](images/cloudNativeImage.png)
+
+---
+
+class: pic
+
+## Continuous
+
+![cicd](images/cicdPipeline.png)
+
+
 ---
 
 ## Deployment becomes very complex

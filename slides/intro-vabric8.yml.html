@@ -29,16 +29,19 @@ Introduction<br/>to Containers, Docker and<br/>Vancis Application Fabric<br/>
 
 .debug[
 ```
- M slides/index.html
  M slides/intro-fullday.yml.html
  M slides/intro-selfpaced.yml.html
-?? slides/intro-vabric8.yml
-?? slides/intro-vabric8.yml.html
-?? slides/vabric8/
+ M slides/intro-vabric8.yml
+ M slides/intro-vabric8.yml.html
+ D slides/vabric8/Docker_History.md
+ M slides/vabric8/Docker_Overview.md
+ M slides/vabric8/intro.md
+?? slides/images/cicdPipeline.png
+?? slides/images/cloudNativeImage.png
 
 ```
 
-These slides have been built from commit: b9d1154
+These slides have been built from commit: 476e65c
 
 
 [vabric8/title.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/title.md)]
@@ -67,23 +70,11 @@ Introduction<br/>to Containers, Docker and<br/>Vancis Application Fabric<br/><br
 .debug[[vabric8/intro.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/intro.md)]
 ---
 
-class: self-paced
-
-## Agenda
-
-- item 1:
-  <br/>item desc
-
-.debug[[vabric8/intro.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/intro.md)]
----
-
 name: toc-chapter-1
 
 ## Chapter 1
 
 - [Docker 30,000ft overview](#toc-docker-ft-overview)
-
-- [History of containers ... and Docker](#toc-history-of-containers--and-docker)
 
 - [Orchestration, an overview](#toc-orchestration-an-overview)
 
@@ -110,7 +101,7 @@ Docker 30,000ft overview
 |
 [Back to table of contents](#toc-chapter-1)
 |
-[Next section](#toc-history-of-containers--and-docker)
+[Next section](#toc-orchestration-an-overview)
 ]
 
 .debug[(automatically generated title slide)]
@@ -142,6 +133,31 @@ In this intro, we will talk about:
   * fast, iterative improvements
   * multiple environments
   * quickly scaling out
+
+* Tenets:
+  * cloud native applications
+  * continuous integration
+  * continuous delivery
+  * continuous deployment
+
+.debug[[vabric8/Docker_Overview.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/Docker_Overview.md)]
+---
+
+class: pic
+
+## Cloud Native
+
+![cloudnative](images/cloudNativeImage.png)
+
+.debug[[vabric8/Docker_Overview.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/Docker_Overview.md)]
+---
+
+class: pic
+
+## Continuous
+
+![cicd](images/cicdPipeline.png)
+
 
 .debug[[vabric8/Docker_Overview.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/Docker_Overview.md)]
 ---
@@ -255,192 +271,13 @@ class: pic
 
 ---
 
-name: toc-history-of-containers--and-docker
-class: title
-
-History of containers ... and Docker
-
-.nav[
-[Previous section](#toc-docker-ft-overview)
-|
-[Back to table of contents](#toc-chapter-1)
-|
-[Next section](#toc-orchestration-an-overview)
-]
-
-.debug[(automatically generated title slide)]
-
----
-# History of containers ... and Docker
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## First experimentations
-
-* [IBM VM/370 (1972)](https://en.wikipedia.org/wiki/VM_%28operating_system%29)
-
-* [Linux VServers (2001)](http://www.solucorp.qc.ca/changes.hc?projet=vserver)
-
-* [Solaris Containers (2004)](https://en.wikipedia.org/wiki/Solaris_Containers)
-
-* [FreeBSD jails (1999)](https://www.freebsd.org/cgi/man.cgi?query=jail&sektion=8&manpath=FreeBSD+4.0-RELEASE)
-
-Containers have been around for a *very long time* indeed.
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-class: pic
-
-## The VPS age (until 2007-2008)
-
-![lightcont](images/containers-as-lightweight-vms.png)
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Containers = cheaper than VMs
-
-* Users: hosting providers.
-
-* Highly specialized audience with strong ops culture.
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-class: pic
-
-## The PAAS period (2008-2013)
-
-![heroku 2007](images/heroku-first-homepage.png)
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Containers = easier than VMs
-
-* I can't speak for Heroku, but containers were (one of) dotCloud's secret weapon
-
-* dotCloud was operating a PaaS, using a custom container engine.
-
-* This engine was based on OpenVZ (and later, LXC) and AUFS.
-
-* It started (circa 2008) as a single Python script.
-
-* By 2012, the engine had multiple (~10) Python components.
-  <br/>(and ~100 other micro-services!)
-
-* End of 2012, dotCloud refactors this container engine.
-
-* The codename for this project is "Docker."
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## First public release of Docker
-
-* March 2013, PyCon, Santa Clara:
-  <br/>"Docker" is shown to a public audience for the first time.
-
-* It is released with an open source license.
-
-* Very positive reactions and feedback!
-
-* The dotCloud team progressively shifts to Docker development.
-
-* The same year, dotCloud changes name to Docker.
-
-* In 2014, the PaaS activity is sold.
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Docker early days (2013-2014)
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## First users of Docker
-
-* PAAS builders (Flynn, Dokku, Tsuru, Deis...)
-
-* PAAS users (those big enough to justify building their own)
-
-* CI platforms
-
-* developers, developers, developers, developers
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Positive feedback loop
-
-* In 2013, the technology under containers (cgroups, namespaces, copy-on-write storage...)
-  had many blind spots.
-
-* The growing popularity of Docker and containers exposed many bugs.
-
-* As a result, those bugs were fixed, resulting in better stability for containers.
-
-* Any decent hosting/cloud provider can run containers today.
-
-* Containers become a great tool to deploy/move workloads to/from on-prem/cloud.
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Maturity (2015-2016)
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Docker becomes an industry standard
-
-* Docker reaches the symbolic 1.0 milestone.
-
-* Existing systems like Mesos and Cloud Foundry add Docker support.
-
-* Standardization around the OCI (Open Containers Initiative).
-
-* Other container engines are developed.
-
-* Creation of the CNCF (Cloud Native Computing Foundation).
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-## Docker becomes a platform
-
-* The initial container engine is now known as "Docker Engine."
-
-* Other tools are added:
-  * Docker Compose (formerly "Fig")
-  * Docker Machine
-  * Docker Swarm
-  * Kitematic
-  * Docker Cloud (formerly "Tutum")
-  * Docker Datacenter
-  * etc.
-
-* Docker Inc. launches commercial offers.
-
-.debug[[intro/Docker_History.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/intro/Docker_History.md)]
----
-
-class: pic
-
-.interstitial[![Image separating from the next chapter](https://gallant-turing-d0d520.netlify.com/containers/aerial-view-of-containers.jpg)]
-
----
-
 name: toc-orchestration-an-overview
 class: title
 
 Orchestration, an overview
 
 .nav[
-[Previous section](#toc-history-of-containers--and-docker)
+[Previous section](#toc-docker-ft-overview)
 |
 [Back to table of contents](#toc-chapter-1)
 |
