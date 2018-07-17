@@ -33,6 +33,7 @@ In this intro, we will talk about:
 * Cloud is about WHERE we are computing; Cloud Native is about How.
 * Cloud Native software is highly distributed, must operate in a constantly changing environment and is constantly changing
 * Failure is the rule, not the exception
+* Requirements:
   * Zero downtime
   * short feedback time
   * Mobile and Multi-Device Support
@@ -45,10 +46,11 @@ class: pic
 
 ## Cloud Native
 
-* Open Source, Standards, API driven.
-* Agile: Continuous Integration / Continuous Delivery
-* Flexible: elastic, scale;
-* Microservices: resilient, composable
+* Characteristics
+  * Open Source, Standards, API driven.
+  * Agile: Continuous Integration / Continuous Delivery
+  * Flexible: elastic, scale;
+  * Microservices: resilient, composable
 
 ![cloudnative](images/cloudNativeImage.png)
 
