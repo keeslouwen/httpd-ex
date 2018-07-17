@@ -31,17 +31,11 @@ Introduction<br/>to Containers, Docker and<br/>Vancis Application Fabric<br/>
 ```
  M slides/intro-fullday.yml.html
  M slides/intro-selfpaced.yml.html
- M slides/intro-vabric8.yml
  M slides/intro-vabric8.yml.html
- D slides/vabric8/Docker_History.md
- M slides/vabric8/Docker_Overview.md
- M slides/vabric8/intro.md
-?? slides/images/cicdPipeline.png
-?? slides/images/cloudNativeImage.png
 
 ```
 
-These slides have been built from commit: 476e65c
+These slides have been built from commit: 90ec0d6
 
 
 [vabric8/title.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/title.md)]
@@ -133,12 +127,22 @@ In this intro, we will talk about:
   * fast, iterative improvements
   * multiple environments
   * quickly scaling out
-
-* Tenets:
   * cloud native applications
-  * continuous integration
-  * continuous delivery
-  * continuous deployment
+  * continuous integration, - delivery, - deployment
+
+.debug[[vabric8/Docker_Overview.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/Docker_Overview.md)]
+---
+
+## Cloud Native Software
+
+* Cloud is about WHERE we are computing; Cloud Native is about How.
+* Cloud Native software is highly distributed, must operate in a constantly changing environment and is constantly changing
+* Failure is the rule, not the exception
+  * Zero downtime
+  * short feedback time
+  * Mobile and Multi-Device Support
+  * Connected devices - (IOT)
+  * Data driven 
 
 .debug[[vabric8/Docker_Overview.md](https://github.com/keeslouwen/httpd-ex.git/tree/master/slides/vabric8/Docker_Overview.md)]
 ---
@@ -146,6 +150,11 @@ In this intro, we will talk about:
 class: pic
 
 ## Cloud Native
+
+* Open Source, Standards, API driven.
+* Agile: Continuous Integration / Continuous Delivery
+* Flexible: elastic, scale;
+* Microservices: resilient, composable
 
 ![cloudnative](images/cloudNativeImage.png)
 
