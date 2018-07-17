@@ -23,18 +23,32 @@ In this intro, we will talk about:
   * fast, iterative improvements
   * multiple environments
   * quickly scaling out
-
-* Tenets:
   * cloud native applications
-  * continuous integration
-  * continuous delivery
-  * continuous deployment
+  * continuous integration, - delivery, - deployment
+
+---
+
+## Cloud Native Software
+
+* Cloud is about WHERE we are computing; Cloud Native is about How.
+* Cloud Native software is highly distributed, must operate in a constantly changing environment and is constantly changing
+* Failure is the rule, not the exception
+  * Zero downtime
+  * short feedback time
+  * Mobile and Multi-Device Support
+  * Connected devices - (IOT)
+  * Data driven 
 
 ---
 
 class: pic
 
 ## Cloud Native
+
+* Open Source, Standards, API driven.
+* Agile: Continuous Integration / Continuous Delivery
+* Flexible: elastic, scale;
+* Microservices: resilient, composable
 
 ![cloudnative](images/cloudNativeImage.png)
 
