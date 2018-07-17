@@ -176,4 +176,4 @@ It depends on:
 
 ## Openshift: Kubernetes / Docker in action
 
-.center[![test environment](images/openshiftTestOmgeving.png)]
+.center[![test environment](images/openshiftTestOmgeving.jpg)]
