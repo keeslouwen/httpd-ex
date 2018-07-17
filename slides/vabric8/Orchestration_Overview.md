@@ -174,6 +174,6 @@ It depends on:
 
 ---
 
-## Openshift which is based upon Kubernetes / Docker in action
+## Openshift: Kubernetes / Docker in action
 
-.center[![Demo stamp](images/demo.jpg)]
+.center[![test environment](images/openshiftTestOmgeving.png)]
